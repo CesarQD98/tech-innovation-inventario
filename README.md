@@ -2,10 +2,9 @@
 
 ## Page structure
 
-1. Home `Public`
-2. Login `Public`
-3. Dashboard *`AuthRequired`*
-4. Inventory *`AuthRequired`*
+1. Login `Public`
+1. Dashboard *`AuthRequired`*
+1. Inventory *`AuthRequired`*
 
 ### Main Components
 
@@ -26,5 +25,7 @@ Links to the following pages:
 
 `More will be added...`
 
+### Ideas
 
+- `PublicNavbar` & `PrivateNavbar`combined in one?
 
