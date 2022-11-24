@@ -1,4 +1,5 @@
 import React from 'react'
+import AuthStatus from '../components/AuthStatus'
 
 function Inventory() {
   return (
@@ -9,6 +10,7 @@ function Inventory() {
         <li>Add react-table dependencies</li>
         <li>Create connection to products db</li>
       </ul>
+      <AuthStatus />
     </div>
   )
 }
