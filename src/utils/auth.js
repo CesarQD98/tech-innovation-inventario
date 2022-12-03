@@ -2,13 +2,13 @@
 
 const fakeAuthProvider = {
   isAuthenticated: false,
-  signin() {
+  iniciaSesion(myCallBack) {
     fakeAuthProvider.isAuthenticated = true;
-    setTimeout(100); // fake async
+    myCallBack();
   },
-  signout() {
+  cierraSesion(myCallBack) {
     fakeAuthProvider.isAuthenticated = false;
-    setTimeout(100); // fake async
+    myCallBack();
   },
 };
 

@@ -33,9 +33,10 @@ export default function SignIn() {
   const navigate = useNavigate();
   const location = useLocation();
   const auth = useAuthContext();
-
-  let from = location.state?.from?.pathname || '/';
-  // console.log(from);
+  const from = location.state?.from?.pathname || '/';
+  console.log(from);
+  console.log('Antes de darle a SIGN IN');
+  console.log(auth);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -48,12 +49,11 @@ export default function SignIn() {
       password: data.get('password'),
     });
 
-    // auth.user = email
-
     auth.signin(email, () => {
       navigate(from, { replace: true });
     });
 
+    console.log('Después de darle a SIGN IN');
     console.log(auth);
 
   };

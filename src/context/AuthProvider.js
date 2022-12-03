@@ -11,14 +11,16 @@ export function useAuthContext() {
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
 
-  const signin = (newUser) => {
-    return fakeAuthProvider.signin(() => {
+  const signin = (newUser, myCallBack) => {
+    return fakeAuthProvider.iniciaSesion(() => {
       setUser(newUser);
+      console.log(user);
+      myCallBack();
     });
   };
 
   const signout = () => {
-    return fakeAuthProvider.signout(() => {
+    return fakeAuthProvider.cierraSesion(() => {
       setUser(null);
     })
   }

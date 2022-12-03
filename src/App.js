@@ -7,6 +7,12 @@ import Home from './pages/Home';
 import Inventory from './pages/Inventory';
 import { AuthProvider } from './context/AuthProvider';
 import RequireAuth from './components/RequireAuth';
+import { Profile } from './pages/Profile';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   return (
@@ -15,6 +21,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/profile' element={<Profile />} />
             <Route
               path='/dashboard'
               element={
